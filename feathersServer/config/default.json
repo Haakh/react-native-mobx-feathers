@@ -1,0 +1,75 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://localhost:27017/react_native_mobx_feathers",
+  "authentication": {
+    "secret": "3f5e775037b09e29a44ec53638c164a52e7891d9ac486bc6ba07c3b0ae903f59abb72ce2a7c4dbbdc3714fdd175841f8df5fbf1ff15c14b199691dfbc96fc5b3613ba14fd85127b515caa0d7ab08350fd5fe2c7945b9dbc4a85e642460056e096b86047596f993fd0c43bace20db6b1ab9ca999c0288936007643a3bfaf0cb2a6f5e34847cee69dfd5d98508518efc3bbaddf43d88cddc17abc17f4da997da7f4a7ca8fae04c801462f1a5dc2e8d69cf95fb6266b491d1b8e3626118392d9620d8826c053b8f0545dd151697c144d9f0d2584feafbb11b1491bc4587f7260e88c2a8d4fae4f1b0db27ef63fb62a2f7f5117b28d3a37be776fcbd405690d3cf86",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "github": {
+      "clientID": "your github client id",
+      "clientSecret": "your github client secret",
+      "successRedirect": "/"
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  }
+}

@@ -19,9 +19,13 @@ mobx
 1. domain and view stores.
 2. async calls in actions mobx.
 3. service folder for feathers backend calls and returns async data.
+4. mobx cache
 
 Boot
 1. mobx store initialize.
 2. rn app initialize.
 3. 3rd party function calls.
 4. all the app listeners that change the stores.
+
+User Data
+• https://randomuser.me/
