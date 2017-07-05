@@ -1,0 +1,27 @@
+1. feathersApp folder containing backend code . including es6 features common Hooks. and authentication.
+2. mobx structuring of the app.
+3. app structure with oneSignal, app listeners and all websockets. in the boot folder.
+4. stores.
+5. models.
+6. services. feathers using async await.
+
+Feathers 
+1. Basic services users, user data.
+2. authentication
+
+RN
+1. login page. async await.
+2. user data / whatever that will be.
+3. flatlist to show rerendering issue of mobx.
+4. React navigation also.
+
+mobx
+1. domain and view stores.
+2. async calls in actions mobx.
+3. service folder for feathers backend calls and returns async data.
+
+Boot
+1. mobx store initialize.
+2. rn app initialize.
+3. 3rd party function calls.
+4. all the app listeners that change the stores.
