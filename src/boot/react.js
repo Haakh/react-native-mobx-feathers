@@ -26,12 +26,6 @@ import platform from '../../native-base-theme/variables/platform';
 // export default function (stores) {
 export default function () {
   return class Root extends React.Component {
-    componentWillMount() {
-        // console.log('ROUTEEE BOOT', stores.viewView.isModal);
-
-      // StatusBar.setBarStyle('light-content', true);
-    }
-
     render() {
       return (
         <View style={{ flex: 1 }}>
