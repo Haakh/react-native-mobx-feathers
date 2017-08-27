@@ -13,7 +13,7 @@ RN
 1. login page. async await.
 2. user data / whatever that will be.
 3. flatlist to show rerendering issue of mobx.
-4. React navigation also.
+4. React navigation also. DONE
 
 mobx
 1. domain and view stores.
