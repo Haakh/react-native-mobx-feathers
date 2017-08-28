@@ -1,4 +1,4 @@
-// import mobx from './mobx';
+import mobx from './mobx';
 import components from './react';
 // import initFeathersApp from './feathersApp';
 // import initChat from './initChat';
@@ -7,9 +7,8 @@ import components from './react';
 
 export default function () {
   // const initFeathers = initFeathersApp();
-  // const stores = mobx(initFeathers);
+  const stores = mobx();
   // initNotifications(stores);
   // initChat(stores, initFeathers);
-  // return components(stores);
-  return components();
+  return components(stores);
 }

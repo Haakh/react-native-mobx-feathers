@@ -1,9 +1,25 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": ["babel-preset-expo", "flow"],
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source",
-      "transform-decorators-legacy"]
+      "plugins": [
+        "transform-react-jsx-source",
+        "transform-decorators-legacy",
+        [
+          "module-resolver",
+          {
+            "root": ["./"],
+            "alias": {
+              "test": "./test",
+              "underscore": "lodash",
+              "app": "./src",
+              "components": "./storybook/stories/components",
+              "screens": "./storybook/stories/screens"
+            },
+            "extensions": [".js"]
+          }
+        ]
+      ]
     }
   }
 }
