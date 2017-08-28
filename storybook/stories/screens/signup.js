@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { PropTypes, View, Text, Button } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { Content, Form, Item, Input, Label, Icon } from 'native-base';
+import PropTypes from 'prop-types';
 
 const SignUpScreen = props =>
   (<Content>
@@ -98,3 +99,7 @@ const SignUpScreen = props =>
   </Content>);
 
 export default SignUpScreen;
+
+SignUpScreen.propTypes = {
+  onSignup: PropTypes.func.isRequired,
+};

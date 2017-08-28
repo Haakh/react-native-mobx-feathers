@@ -4,13 +4,9 @@ import { observer, inject } from 'mobx-react/native';
 import { StackNavigator } from 'react-navigation';
 import { Container, Content, Header, Footer, FooterTab, Button } from 'native-base';
 
-@inject('viewList', 'domainList')
+@inject('viewHome', 'domainList')
 @observer
 class Home extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
-  };
-
   render() {
     return (
       <Container>
@@ -30,5 +26,7 @@ class Home extends React.Component {
     );
   }
 }
+
+Home.propTypes = {};
 
 export default Home;

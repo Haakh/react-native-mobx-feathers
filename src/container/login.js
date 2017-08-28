@@ -6,18 +6,15 @@ import { StackNavigator } from 'react-navigation';
 import PropTypes from 'prop-types';
 import LoginScreen from 'screens/login';
 
+@inject('viewLogin', 'domainUser')
+@observer
 export default class Login extends React.Component {
-  static navigationOptions = {
-    title: 'Login',
-  };
-
   render() {
     const { navigate } = this.props.navigation;
     return <LoginScreen onLogin={() => navigate('Home')} onSignup={() => navigate('SignUp')} />;
   }
 }
 
-Login.PropTypes = {
+Login.propTypes = {
   navigation: PropTypes.object.isRequired,
-  navigate: PropTypes.object.isRequired,
 };

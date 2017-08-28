@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { PropTypes, View, Text, Button } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import { Content, Form, Item, Input, Label, Icon } from 'native-base';
+import PropTypes from 'prop-types';
 
 const Login = props =>
   (<Content>
@@ -41,10 +42,14 @@ const Login = props =>
           </View>
         </View>
       </Form>
-
-      <Button onPress={() => props.onLogin()} title="Login" />
-      <Button onPress={() => props.onSignup()} title="SignUp" />
+      <Button onPress={props.onLogin} title="Login" />
+      <Button onPress={props.onSignup} title="SignUp" />
     </View>
   </Content>);
 
 export default Login;
+
+Login.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+  onSignup: PropTypes.func.isRequired,
+};

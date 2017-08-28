@@ -6,7 +6,6 @@ import getTheme from '../../native-base-theme/components';
 
 import Routes from '../container/routes';
 import platform from '../../native-base-theme/variables/platform';
-// import ViewStore from '../../src/store/View/ViewStore';
 
 // import { enableLogging } from 'mobx-logger';
 

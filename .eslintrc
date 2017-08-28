@@ -10,7 +10,8 @@
     "no-console": "off",
     "no-unused-vars": "off",
     "react/prefer-stateless-function": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "jsx-a11y/href-no-hash": "off"
   },
   "settings": {
     "import/resolver": {

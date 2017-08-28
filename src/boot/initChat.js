@@ -3,10 +3,10 @@ import React from 'react';
 import { toJS } from 'mobx';
 import config from '../../config';
 
+// Chat Socket Listener
 export default function (stores, initFeathers) {
   const chat = initFeathers.service('groupsmessages');
   chat.on('created', (msg) => {
-    // console.log(msg);
     if (stores.viewChat.initialID !== msg._id) {
       if (
         stores.viewChat.buildingGroupId !== 0 &&
@@ -17,13 +17,7 @@ export default function (stores, initFeathers) {
           stores.viewChat.increaseBuildingChatCount();
         }
       }
-      stores.viewChat.initialID = msg._id;
       stores.domainChat.newMessage(msg);
     }
-    // if (msg.user._id !== this.props['domainUser].user._id) {
-    //   if (this.props['viewView].appTabScreen !== 'chat') {
-    //     this.props['viewChat].changeBadge();
-    //   }
-    // }
   });
 }
